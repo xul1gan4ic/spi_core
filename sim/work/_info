@@ -1,0 +1,212 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/questasim64_10.4c/works/spi/sim
+T_opt
+!s110 1737399070
+V;fnMXeVibN3V6RNo`o7Bb0
+Z1 04 11 4 work tb_spi_core fast 0
+=1-fc3497ba9692-678e9b1d-3ae-12b4
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z3 OL;O;10.4c;61
+R0
+T_opt1
+Z4 !s110 1737397770
+V:oh9_WMo]M2PaAA6T7>Ug1
+R1
+=1-fc3497ba9692-678e960a-15b-23d8
+R2
+n@_opt1
+R3
+R0
+vbutton_handler
+Z5 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z6 !s110 1737399127
+!i10b 1
+!s100 DA1KFNBa=gNodG8[XH4:T1
+Il5DOdWdlYE2D9DOR^3;V`2
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 !s105 button_handler_sv_unit
+S1
+R0
+w1737223763
+8../rtl/button_handler.sv
+F../rtl/button_handler.sv
+L0 1
+Z9 OL;L;10.4c;61
+r1
+!s85 0
+31
+Z10 !s108 1737399126.000000
+Z11 !s107 ./src/tb_transmitter.sv|./src/tb_spi_core.sv|./src/tb_data_former.sv|./src/tb_button_handler.sv|../rtl/transmitter.sv|../rtl/spi_core.sv|../rtl/data_former.sv|../rtl/button_handler.sv|
+Z12 !s90 -reportprogress|300|-sv|-mfcu|+initmem+0|../rtl/button_handler.sv|../rtl/data_former.sv|../rtl/spi_core.sv|../rtl/transmitter.sv|./src/tb_button_handler.sv|./src/tb_data_former.sv|./src/tb_spi_core.sv|./src/tb_transmitter.sv|
+!i113 0
+Z13 o-sv -mfcu +initmem+0 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vdata_former
+R5
+R6
+!i10b 1
+!s100 @D>7o0;P=AA59@TzzhdnZ3
+I=QiPe@NfT37I`>Mk5i`:W0
+R7
+R8
+S1
+R0
+w1737298984
+8../rtl/data_former.sv
+F../rtl/data_former.sv
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+vspi_core
+R5
+R6
+!i10b 1
+!s100 ]d8kjT@B5K:bSWeiD7FNh3
+I2cSoKCc8bA?T?ld1o1BaL0
+R7
+R8
+S1
+R0
+w1737244673
+8../rtl/spi_core.sv
+F../rtl/spi_core.sv
+L0 1
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+vtb_button_handler
+R5
+R6
+!i10b 1
+!s100 IO=:g<h_RToI?4H>lP=1;2
+I;S?eb_JM;ZRE6[0E09S@=3
+R7
+R8
+S1
+R0
+w1737122673
+8./src/tb_button_handler.sv
+F./src/tb_button_handler.sv
+L0 2
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+vtb_data_former
+R5
+R6
+!i10b 1
+!s100 d5ISTUj;9]gL3^oVSCC>@2
+ITT7M@6`LNjIDJ;^O=YK9L2
+R7
+R8
+S1
+R0
+w1737144227
+8./src/tb_data_former.sv
+F./src/tb_data_former.sv
+L0 2
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+vtb_spi_core
+R5
+R6
+!i10b 1
+!s100 Y?]a1eB00>SHKl[A]DTgC2
+ID^R2l4Ub>iSkDNUV1VmQa3
+R7
+R8
+S1
+R0
+w1737302380
+8./src/tb_spi_core.sv
+F./src/tb_spi_core.sv
+L0 2
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+vtb_transmitter
+R5
+R6
+!i10b 1
+!s100 ;_:Nl6JVZbDP9WKFl3EV43
+IBzR1C9BS559T2bf5jPTcA0
+R7
+R8
+S1
+R0
+w1737303371
+8./src/tb_transmitter.sv
+F./src/tb_transmitter.sv
+L0 2
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+vtransmitter
+R5
+R4
+!i10b 1
+!s100 i>mUbZZ^EIa]<bQco[if@3
+IRPUe7i1d9Z__RK3Q_1`6W2
+R7
+R8
+S1
+R0
+w1737397629
+8../rtl/transmitter.sv
+F../rtl/transmitter.sv
+L0 1
+R9
+r1
+!s85 0
+31
+!s108 1737397770.000000
+R11
+R12
+!i113 0
+R13

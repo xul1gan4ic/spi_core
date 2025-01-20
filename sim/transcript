@@ -1,0 +1,41 @@
+# ** Warning: (vsim-14) Failed to open "C:/questasim64_10.4c/works/spi/spi.mpf" specified by the MODELSIM environment variable.
+# No such file or directory. (errno = ENOENT)
+# //  Questa Sim-64
+# //  Version 10.4c win64 Jul 20 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# do sim.do
+# QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+# Start time: 21:52:06 on Jan 20,2025
+# vlog -reportprogress 300 -sv -mfcu "+initmem+0" ../rtl/button_handler.sv ../rtl/data_former.sv ../rtl/spi_core.sv ../rtl/transmitter.sv ./src/tb_button_handler.sv ./src/tb_data_former.sv ./src/tb_spi_core.sv ./src/tb_transmitter.sv 
+# -- Compiling module button_handler
+# -- Compiling module data_former
+# -- Compiling module spi_core
+# -- Compiling module transmitter
+# ** Error (suppressible): (vlog-12003) ../rtl/transmitter.sv(69): Variable 'busy' written by continuous and procedural assignments. See ../rtl/transmitter.sv(58). 
+# 
+# -- Compiling module tb_button_handler
+# -- Compiling module tb_data_former
+# -- Compiling module tb_spi_core
+# -- Compiling module tb_transmitter
+# End time: 21:52:07 on Jan 20,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_10.4c/win64/vlog failed.
+# Error in macro ./sim.do line 4
+# C:/questasim64_10.4c/win64/vlog failed.
+#     while executing
+# "vlog -sv -mfcu +initmem+0 \
+#     ../rtl/*.sv           \
+#     ./src/*.sv            \
+# "
