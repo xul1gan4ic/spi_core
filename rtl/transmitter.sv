@@ -19,8 +19,7 @@ output logic mosi;
 
 logic [p_data_width - 1:0] data_r;
 logic [$clog2(p_data_width):0] cnt;
-logic [$clog2(p_clk_div) - 1:0] clk_div_cnt;
-logic [$clog2(p_clk_div):0] clk_div_cnt_2;
+logic [$clog2(p_clk_div):0] clk_div_cnt;
 logic clk_div;
 logic busy;
 logic cs_n_r;
@@ -41,21 +40,8 @@ begin
     end
 end
 
-assign clk_div = &clk_div_cnt;
-
-always_ff @ (posedge clk)
-begin
-    if (~cs_n_r)
-    begin
-        clk_div_cnt_2 <= clk_div_cnt_2 + 1'b1;
-    end
-    else
-    begin
-        clk_div_cnt_2 <= '0;
-    end
-end
-
-assign clk_div_2 = &clk_div_cnt_2;
+assign clk_div = &clk_div_cnt[$clog2(p_clk_div) - 1:0];
+assign clk_div_2 = &clk_div_cnt;
 
 always_ff @ (posedge clk)
 begin
@@ -87,7 +73,6 @@ begin
         data_r        <= '0;
         cnt           <= '0;
         clk_div_cnt   <= '0;
-        clk_div_cnt_2 <= '0;
         busy          <= '0;
     end
     else if (start)
