@@ -1,5 +1,7 @@
 module spi_core(clk_100, button_0, button_1, a_rst, s_rst, sck, cs_n, mosi);
     parameter p_data_width = 8;
+    parameter p_clk_div    = 4;  
+    parameter p_cs_polar   = 1;
 
     input clk_100;
     input button_0, button_1;
@@ -22,7 +24,9 @@ button_handler bh (
     .start_send(start_send)
 );
 
-data_former df (
+data_former #(
+    .p_data_width(p_data_width)  
+) df (
     .clk(clk_100),
     .a_rst(a_rst),
     .s_rst(s_rst),
@@ -33,7 +37,11 @@ data_former df (
     .data(data)
 );
 
-transmitter trs (
+transmitter # (
+    .p_data_width(p_data_width),
+    .p_clk_div(p_clk_div),
+    .p_cs_polar(p_cs_polar)
+) trs (
     .clk(clk_100),
     .a_rst(a_rst),
     .s_rst(s_rst),
