@@ -10,18 +10,30 @@ module spi_core(clk_100, button_0, button_1, a_rst, s_rst, sck, cs_n, mosi);
     output logic cs_n;
     output logic mosi;
 
-logic next_count, start_send;
+logic sync_btn_0, sync_btn_1;
+logic btn_0_ne, btn_0_pe;
+logic btn_1_ne, btn_1,pe;
 logic ready, valid;
 logic [p_data_width - 1:0] data;
 
-button_handler bh (
+sync # (
+    .p_sync_stages(2)
+) sync_button_0 (
     .clk(clk_100),
-    .a_rst(a_rst),
-    .s_rst(s_rst),
-    .button_0(button_0),
-    .button_1(button_1),
-    .next_count(next_count),
-    .start_send(start_send)
+    .d(button_0),
+    .d_o(sync_btn_0),
+    .d_o_ne(btn_0_ne),
+    .d_o_pe(btn_0_pe)
+);
+
+sync # (
+    .p_sync_stages(2)
+) sync_button_1 (
+    .clk(clk_100),
+    .d(button_1),
+    .d_o(sync_btn_1),
+    .d_o_ne(btn_1_ne),
+    .d_o_pe(btn_1_pe)
 );
 
 data_former #(
@@ -30,8 +42,8 @@ data_former #(
     .clk(clk_100),
     .a_rst(a_rst),
     .s_rst(s_rst),
-    .next_count(next_count),
-    .start_send(start_send),
+    .next_count(btn_0_pe),
+    .start_send(btn_1_pe),
     .ready(ready),
     .valid(valid),
     .data(data)
