@@ -15,7 +15,7 @@ end
 
 assign d_o = sync_reg[p_sync_stages - 1];
 
-assign d_o_pe = (sync_reg[p_sync_stages - 2] == 0) && (sync_reg[p_sync_stages - 1] == 1);
-assign d_o_ne = (sync_reg[p_sync_stages - 2] == 1) && (sync_reg[p_sync_stages - 1] == 0);
+assign d_o_pe = (sync_reg[p_sync_stages - 2] == 1) && (sync_reg[p_sync_stages - 1] == 0);
+assign d_o_ne = (sync_reg[p_sync_stages - 2] == 0) && (sync_reg[p_sync_stages - 1] == 1);
 
 endmodule
